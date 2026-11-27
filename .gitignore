@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vscode-test/
+outputs/
+exports/
+temp/
+release/
+*.vsix
+*.vsix.zip
+*.log
+__pycache__/
+*.pyc

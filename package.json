@@ -1,0 +1,28 @@
+{
+  "name": "codex-chat-history-exporter-mac",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Xnidada",
+  "license": "MIT",
+  "description": "macOS desktop app for exporting ChatGPT Desktop Codex sessions to Markdown.",
+  "main": "./dist/desktop/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xnidada/codex-chat-history-exporter-mac.git"
+  },
+  "scripts": {
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json --watch",
+    "test": "node ./node_modules/vitest/vitest.mjs run",
+    "test:core": "node ./node_modules/vitest/vitest.mjs run tests/core",
+    "desktop:dev": "npm run build && electron dist/desktop/main.js",
+    "desktop:package": "npm run build && electron-builder --config electron-builder.json --mac dmg zip --universal"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "electron": "^37.3.1",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
+  }
+}

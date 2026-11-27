@@ -1,0 +1,30 @@
+{
+  "appId": "com.xnidada.codex-chat-history-exporter.mac",
+  "productName": "Codex Chat Exporter Desktop",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "media/**/*",
+    "package.json"
+  ],
+  "asar": true,
+  "extraMetadata": {
+    "main": "dist/desktop/main.js"
+  },
+  "mac": {
+    "icon": "media/desktop-app.icns",
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["arm64", "x64"]
+      },
+      {
+        "target": "zip",
+        "arch": ["arm64", "x64"]
+      }
+    ],
+    "artifactName": "Codex-Chat-Exporter-Desktop-${version}-${arch}.${ext}"
+  }
+}
