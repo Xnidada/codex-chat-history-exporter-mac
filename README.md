@@ -4,6 +4,10 @@
 
 项目只提供 macOS Electron 桌面应用。
 
+## 参考项目
+
+本项目的初始实现参考了 [Semtea1/codex-chat-history-exporter](https://github.com/Semtea1/codex-chat-history-exporter)，并在此基础上重构为面向 macOS ChatGPT Desktop 的独立桌面应用。
+
 ## 功能
 
 - 从 ChatGPT Desktop 的本地会话日志读取聊天记录
